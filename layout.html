@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>layout</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.layout{
+			margin-top: 20px;
+		}
+		.layout div{
+			height: 100px;
+		}
+
+		/*float实现三栏布局*/
+		.layout.float .float-left{
+			width: 300px;
+			float: left;
+			background: red;
+		}
+		.layout.float .float-right{
+			width: 300px;
+			float: right;
+			background: blue;
+		}
+		.layout.float .float-center{
+			background: yellow;
+		}
+
+		/*position实现三栏布局*/
+		.layout.position .position-wrapper{
+			position: relative;
+		}
+		.layout.position .position-left{
+			width: 300px;
+			background: red;
+		}
+		.layout.position .position-center{
+			position: absolute;
+			top: 0;
+			left: 300px;
+			right: 300px;
+			background: yellow;
+		}
+		.layout.position .position-right{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 300px;
+			background: blue;
+		}
+
+		/*flex实现三栏布局*/
+		.layout.flex .flex-wrapper{
+			display: flex;
+		}
+		.layout.flex .flex-left{
+			width: 300px;
+			background: red;
+		}
+		.layout.flex .flex-center{
+			flex: 1;
+			background: yellow;
+		}
+		.layout.flex .flex-right{
+			width: 300px;
+			background: blue;
+		}
+
+		/*table实现三栏布局*/
+		.layout.table .table-wrapper{
+			display: table;
+			width: 100%;
+		}
+		.layout.table div{
+			display: table-cell;
+		}
+		.layout.table .table-left{
+			width: 300px;
+			background: red;
+		}
+		.layout.table .table-center{
+			background: yellow;
+		}
+		.layout.table .table-right{
+			width: 300px;
+			background: blue;
+		}
+
+		/*Grid实现三栏布局*/
+		.layout.grid .grid-wrapper{
+			display: grid;
+			grid-template-columns: 300px auto 300px;
+		}
+		.layout.grid .grid-left{
+			background: red;
+		}
+		.layout.grid .grid-center{
+			background: yellow;
+		}
+		.layout.grid .grid-right{
+			background: blue;
+		}
+	</style>
+	<section class="layout float">
+		<article class="float-wrapper">
+			<div class="float-left"></div>
+			<div class="float-right"></div>
+			<div class="float-center">
+				<p>我是中间的的元素</p>
+				<p>使用float实现三栏页面布局</p>
+				<p>使用float实现三栏页面布局</p>
+			</div>
+		</article>
+	</section>
+
+	<section class="layout position">
+		<article class="position-wrapper">
+			<div class="position-left"></div>
+			<div class="position-center">
+				<p>我是中间的的元素</p>
+				<p>使用position实现三栏页面布局</p>
+				<p>使用position实现三栏页面布局</p>
+			</div>
+			<div class="position-right"></div>
+		</article>
+	</section>
+
+	<section class="layout flex">
+		<article class="flex-wrapper">
+			<div class="flex-left"></div>
+			<div class="flex-center">
+				<p>我是中间的的元素</p>
+				<p>使用flex实现三栏页面布局</p>
+				<p>使用flex实现三栏页面布局</p>
+			</div>
+			<div class="flex-right"></div>
+		</article>
+	</section>
+
+	<section class="layout table">
+		<article class="table-wrapper">
+			<div class="table-left"></div>
+			<div class="table-center">
+				<p>我是中间的的元素</p>
+				<p>使用table实现三栏页面布局</p>
+				<p>使用table实现三栏页面布局</p>
+			</div>
+			<div class="table-right"></div>
+		</article>
+	</section>
+
+	<section class="layout grid">
+		<article class="grid-wrapper">
+			<div class="grid-left"></div>
+			<div class="grid-center">
+				<p>我是中间的的元素</p>
+				<p>使用grid实现三栏页面布局</p>
+				<p>使用grid实现三栏页面布局</p>
+			</div>
+			<div class="grid-right"></div>
+		</article>
+	</section>
+
+</body>
+</html>
